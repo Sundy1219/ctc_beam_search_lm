@@ -11,7 +11,7 @@
 
 2 相关的解码参数<br>
 -------------
-  1)num_frames:为wav的帧数<br>
+  1)　num_frames:为wav的帧数<br>
   2)num_classes:为分类的数目，比如建模单元为多少个汉字<br>
   3)beam_size:beam的大小<br>
   4)blank_id:ctc训练时,blank的id<br>
