@@ -9,7 +9,7 @@
   4) ./bootstrap.sh<br>
   5) ./b2 perfix=/home/……(自己的安装目录)<br>
 
-2 相关的解码参数<br>
+2 ctc_beam_search_decoder.cpp中相关的解码参数<br>
 -------------
   1)  num_frames:为wav的帧数<br>
   2) num_classes:为分类的数目，比如建模单元为多少个汉字<br>
