@@ -20,6 +20,7 @@
   7)beta:为句子长度系数<br>
   8)输入:经声学模型后的softmax概率prob.txt,以及相应的字表vocab.txt<br>
   9)输出:解码结果<br>
+
 3 编译ctc_beam_search_decoder.cpp<br>
 ---------------------------------
   将boost_1_67_0下的boost目录拷到ctc_beam_search_lm下，此项目已拷过了,可直接用<br>
