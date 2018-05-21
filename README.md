@@ -31,4 +31,5 @@
 ./ctc_beam_search_decoder
 
 5 解码结果
----------
+--------- 
+![](https://github.com/Sundy1219/ctc_beam_search_lm/result.png)
