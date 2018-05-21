@@ -187,7 +187,7 @@ int main()
 
 	int num_frames = 157;
 	int num_classes = 5125;
-	int beam_size = 1000;
+	int beam_size = 50;
 	int blank_id = 5124;
 	float cutoff_prob = 0.93;
 	float alpha = 2.5;
