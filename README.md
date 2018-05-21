@@ -32,4 +32,4 @@
 
 5 解码结果
 --------- 
-![result](https://github.com/Sundy1219/ctc_beam_search_lm/master/result.png)
+![decode_result](https://github.com/Sundy1219/ctc_beam_search_lm/raw/master/result.png)
