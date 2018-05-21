@@ -1,7 +1,7 @@
 此为百度第二代语音识别解码方案 CTC+BeamSearch+LM
 ===============================================
-<<<<<<< HEAD
+
 #安装boost
-=======
-#
->>>>>>> c97979087994f6967ed40fc39011f47b67ae4157
+##1,下载[boost_1_67_0.tar.gz](https://dl.bintray.com/boostorg/release/1.67.0/source/boost_1_67_0.tar.gz)
+##2,tar -xzvf boost_1_67_0.tar.gz
+##3,
