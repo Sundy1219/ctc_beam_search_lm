@@ -111,7 +111,7 @@ float Scorer::get_score(std::string sentence) {
 }
 
 
-int main(){
+/*int main(){
    Scorer *p_score=new Scorer(1.0,1.5,"train.binary");
    //std::string s="金 林 饭 店";
    std::string s="一 九";
@@ -120,5 +120,5 @@ int main(){
    float final_score=p_score->get_score(s);
    std::cout<<"The score of last word of sentence is "<<lm_score<<"\n";
    std::cout<<"The final score of last word of sentence is "<<final_score<<"\n";
-}
+}*/
 
