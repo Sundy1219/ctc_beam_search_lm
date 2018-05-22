@@ -1,4 +1,4 @@
-此为百度第二代语音识别解码方案 CTC+BeamSearch+LM
+此为百度第二代语音识别解码方案C++版本 CTC+BeamSearch+LM
 ===============================================
 
 １ 安装boost<br>
@@ -9,7 +9,7 @@
   4) ./bootstrap.sh<br>
   5) ./b2 perfix=/home/……(自己的安装目录)<br>
 
-2 相关的解码参数<br>
+2 ctc_beam_search_decoder.cpp中相关的解码参数<br>
 -------------
   1)  num_frames:为wav的帧数<br>
   2) num_classes:为分类的数目，比如建模单元为多少个汉字<br>
@@ -31,4 +31,5 @@
 ./ctc_beam_search_decoder
 
 5 解码结果
----------
+--------- 
+![decode_result](https://github.com/Sundy1219/ctc_beam_search_lm/raw/master/result.png)
