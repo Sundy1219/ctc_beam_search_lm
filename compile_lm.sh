@@ -21,6 +21,7 @@ echo 'Compiling with '$CXX $CXXFLAGS
 #Grab all cc files in these directories except those ending in test.cc or main.cc
 objects=""
 for i in util/double-conversion/*.cc util/*.cc lm/*.cc $ADDED_PATHS; do
+#for i in lm/*.cc $ADDED_PATHS; do
   if [ "${i%test.cc}" == "$i" ] && [ "${i%main.cc}" == "$i" ]; then
     $CXX $CXXFLAGS -c $i -o ${i%.cc}.o
     objects="$objects ${i%.cc}.o"
