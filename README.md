@@ -15,8 +15,7 @@
 
 ２ 编译ctc_beam_search_decoder.cpp<br>
 ---------------------------------
-  1) 将boost_1_67_0下的boost目录拷到ctc_beam_search_lm下，此项目已拷过了,可直接用<br>
-  2) 开始编译: ./compile_decoder.sh<br>
+  1)开始编译: ./compile_decoder.sh<br>
 
 ３ 运行解码<br>
 ----------
