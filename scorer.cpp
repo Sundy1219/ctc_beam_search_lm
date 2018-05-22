@@ -8,6 +8,7 @@
 
 using namespace lm::ngram;
 
+
 Scorer::Scorer(float alpha, float beta, std::string lm_model_path) {
     this->_alpha = alpha;
     this->_beta = beta;
@@ -17,6 +18,7 @@ Scorer::Scorer(float alpha, float beta, std::string lm_model_path) {
 Scorer::~Scorer(){
    delete (Model *)this->_language_model;
 }
+
 
 inline void strip(std::string &str, char ch=' ') {
     if (str.size() == 0) return;
@@ -46,6 +48,7 @@ inline void strip(std::string &str, char ch=' ') {
     }
 }
 
+
 int Scorer::word_count(std::string sentence) {
     strip(sentence);
     int cnt = 0;
@@ -59,7 +62,8 @@ int Scorer::word_count(std::string sentence) {
     return cnt;
 }
 
-void split(const std::string &s,char delimiter,std::vector<std::string> &v)
+
+inline void split(const std::string &s,char delimiter,std::vector<std::string> &v)
 {
 	std::string::size_type i = 0;
 	std::string::size_type j = s.find(delimiter);
@@ -73,20 +77,18 @@ void split(const std::string &s,char delimiter,std::vector<std::string> &v)
 		v.push_back(s.substr(i,s.length()));
 }
 
+
 float Scorer::language_model_score(std::string sentence) {
     Model *model = (Model *)this->_language_model;
     State state, out_state;
     lm::FullScoreReturn ret;
     state = model->BeginSentenceState();
-		std::cout<<sentence.size()<<std::endl;
-//    for (util::TokenIter<util::SingleCharacter, true> it(sentence, ' '); it; ++it){
+		
 		std::vector<std::string> word;
 		split(sentence,' ',word);
 		for(std::vector<std::string>::iterator it=word.begin();it!=word.end();it++)
 		{
-				std::cout<<*it<<std::endl;
         lm::WordIndex vocab = model->GetVocabulary().Index(*it);
-				std::cout<<vocab<<std::endl;
         ret = model->FullScore(state, vocab, out_state);
         state = out_state;
     }
@@ -94,6 +96,7 @@ float Scorer::language_model_score(std::string sentence) {
     
     return  pow(10, score);
 }
+
 
 float Scorer::get_score(std::string sentence) {
     float lm_score = language_model_score(sentence);
@@ -107,8 +110,9 @@ float Scorer::get_score(std::string sentence) {
 		return final_score;
 }
 
+
 int main(){
-   Scorer *p_score=new Scorer(1.0,1.5,"train_lm");
+   Scorer *p_score=new Scorer(1.0,1.5,"train.binary");
    //std::string s="金 林 饭 店";
    std::string s="一 九";
 	 bool is_log = true;
