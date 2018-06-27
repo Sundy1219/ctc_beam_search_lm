@@ -186,12 +186,12 @@ int main()
 	gettimeofday( &start, NULL );
 
 	int num_frames = 157;
-	int num_classes = 5125;
-	int beam_size = 50;
-	int blank_id = 5124;
-	float cutoff_prob = 0.93;
-	float alpha = 2.5;
-	float beta = 1.5;
+	int num_classes = 3627;
+	int beam_size = 100;
+	int blank_id = 3626;
+	float cutoff_prob = 0.95;
+	float alpha = 1.5;
+	float beta = 1.0;
 
 	std::vector<std::string> vocab(num_classes);
 	std::vector<std::vector<float> > probs_seq(num_frames,std::vector<float>(num_classes));
@@ -200,7 +200,7 @@ int main()
 	Scorer *p_score=new Scorer(alpha,beta,"train.binary");
 
 	prob.open("prob.txt");
-	v.open("vocab.txt");
+	v.open("class_label.txt");
 	if (!prob.is_open())
 	{
 		std::cout<<"Open file failed"<<"\n";

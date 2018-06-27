@@ -142,7 +142,9 @@ LM_NAME_MODEL(QuantArrayTrieModel, detail::GenericModel<trie::TrieSearch<Separat
 
 // Default implementation.  No real reason for it to be the default.
 typedef ::lm::ngram::ProbingVocabulary Vocabulary;
+//typedef ::lm::ngram::SortedVocabulary Vocabulary;
 typedef ProbingModel Model;
+//typedef TrieModel Model;
 
 /* Autorecognize the file type, load, and return the virtual base class.  Don't
  * use the virtual base class if you can avoid it.  Instead, use the above

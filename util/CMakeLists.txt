@@ -55,7 +55,7 @@ set_source_files_properties(file_piece_test.cc PROPERTIES COMPILE_FLAGS ${READ_C
 
 # This directory has children that need to be processed
 add_subdirectory(double-conversion)
-add_subdirectory(stream)
+#add_subdirectory(stream)
 
 if (UNIX AND NOT APPLE)
   set(TIMER_LINK rt)
@@ -71,8 +71,8 @@ endif()
 add_library(kenlm_util ${KENLM_UTIL_DOUBLECONVERSION_SOURCE} ${KENLM_UTIL_STREAM_SOURCE} ${KENLM_UTIL_SOURCE})
 target_link_libraries(kenlm_util ${Boost_LIBRARIES} ${READ_COMPRESSED_LIBS} ${THREADS} ${TIMER_LINK})
 
-AddExes(EXES probing_hash_table_benchmark
-        LIBRARIES kenlm_util ${Boost_LIBRARIES} ${THREADS})
+#AddExes(EXES probing_hash_table_benchmark
+#        LIBRARIES kenlm_util ${Boost_LIBRARIES} ${THREADS})
 
 # Only compile and run unit tests if tests should be run
 if(BUILD_TESTING)
